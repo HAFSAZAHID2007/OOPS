@@ -1,0 +1,16 @@
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\bin\Debug\net10.0\InventoryBillingSystem.exe
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\bin\Debug\net10.0\InventoryBillingSystem.dll
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\InventoryBillingSystem.GeneratedMSBuildEditorConfig.editorconfig
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\InventoryBillingSystem.AssemblyInfoInputs.cache
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\InventoryBillingSystem.AssemblyInfo.cs
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\InventoryBillingSystem.csproj.CoreCompileInputs.cache
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\InventoryBillingSystem.sourcelink.json
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\InventoryBillingSystem.dll
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\refint\InventoryBillingSystem.dll
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\InventoryBillingSystem.pdb
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\bin\Debug\net10.0\InventoryBillingSystem.deps.json
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\bin\Debug\net10.0\InventoryBillingSystem.runtimeconfig.json
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\bin\Debug\net10.0\InventoryBillingSystem.pdb
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\InventoryBillingSystem.genruntimeconfig.cache
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\ref\InventoryBillingSystem.dll
+E:\OOPS\InventoryBillingSystem\InventoryBillingSystem\obj\Debug\net10.0\Inventor.01338F55.Up2Date
