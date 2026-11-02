@@ -12,7 +12,7 @@ namespace InventoryBillingSystem.Product
         {
             using (StreamWriter writer = new StreamWriter(filePath, true))
             {
-                writer.WriteLine(product.ProductName + "," + product.ProductPrice + "," + product.ProductQty);
+                writer.WriteLine(product.ProductName + "," + product.ProductPrice + "," + product.ProductQty + product.ProductCategory);
             }
 
 
@@ -31,7 +31,7 @@ namespace InventoryBillingSystem.Product
                         string[] data = line.Split(',');
                         ProductModel product
                              = new ProductModel(
-                                 data[0], int.Parse(data[1]), int.Parse(data[2]));
+                                 data[0], int.Parse(data[1]), int.Parse(data[2]), data[3]);
                         products.Add(product);
 
                     }

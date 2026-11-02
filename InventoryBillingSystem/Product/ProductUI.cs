@@ -23,7 +23,10 @@ public void ShowProductMenu()
                 Console.WriteLine("3. Search Product");
                 Console.WriteLine("4. Update Product");
                 Console.WriteLine("5. Delete Product");
-                Console.WriteLine("6. Back to Main Menu");
+                Console.WriteLine("6. Filter Product");
+
+
+                Console.WriteLine("7. Back to Main Menu");
 
                 Console.Write("Enter Choice: ");
             string     choice = Console.ReadLine();
@@ -50,6 +53,11 @@ public void ShowProductMenu()
                 }
                 else if (choice == "6")
                 {
+                   //filterfunction
+                   FilterProductUI();
+                }
+                else if (choice == "7")
+                {
                     Console.WriteLine("Returning to Admin Menu...");
                     return;
                 }
@@ -72,7 +80,11 @@ public void ShowProductMenu()
             Console.Write("Enter Product Quantity: ");
             int qty = int.Parse(Console.ReadLine());
 
-            ProductModel product = new ProductModel(name, price, qty);
+            Console.Write("Enter Product Category: ");
+            string ctg = Console.ReadLine();
+
+
+            ProductModel product = new ProductModel(name, price, qty , ctg);
 
             service.AddProduct(product);
 
@@ -90,6 +102,8 @@ public void ShowProductMenu()
                 Console.WriteLine("Name: " + product.ProductName);
                 Console.WriteLine("Price: " + product.ProductPrice);
                 Console.WriteLine("Quantity: " + product.ProductQty);
+                Console.WriteLine("Category: " + product.ProductCategory);
+
             }
         }
 
@@ -108,6 +122,8 @@ public void ShowProductMenu()
                 Console.WriteLine("Name: " + product.ProductName);
                 Console.WriteLine("Price: " + product.ProductPrice);
                 Console.WriteLine("Quantity: " + product.ProductQty);
+                Console.WriteLine("Category: " + product.ProductCategory);
+
             }
             else
             {
@@ -177,6 +193,42 @@ public void ShowProductMenu()
                 Console.WriteLine("Product Not Found!");
             }
         }
+         //FilterFunction
+        private void FilterProductUI()
+        {
+            Console.WriteLine("Enter the product character  you want to search");
+            char character = char.Parse (Console.ReadLine());
+            
+            List<ProductModel> result = service.NameSearch(character);
+            foreach (ProductModel p in result)
+            {
+                Console.WriteLine(p.ProductName);
+            }
+
+            Console.WriteLine("Enter the Max Range of Price");
+
+            int MaxRange = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Min Range of Price");
+            int MinRange = int.Parse(Console.ReadLine());
+            List<ProductModel> range = service.NumericRange(MaxRange, MinRange);
+            foreach (ProductModel p in range)
+            { 
+                Console.WriteLine(p.ProductName);
+                Console.WriteLine(p.ProductPrice);
+              
+            }
+
+            Console.WriteLine("Enter Category ");
+            string C = Console.ReadLine();
+            List<ProductModel> CtgFilter = service.CategoryMatch(C);
+            foreach (ProductModel p in CtgFilter)
+            {
+                Console.WriteLine(p.ProductName);
+                Console.WriteLine(p.ProductCategory);
+            }
+
+        }
+       
     }
 }
     

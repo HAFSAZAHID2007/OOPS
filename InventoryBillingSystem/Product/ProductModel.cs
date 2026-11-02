@@ -9,7 +9,13 @@ namespace InventoryBillingSystem.Product
         private string productName;
         private int productPrice;
         private int productQty;
+        private string productCategory;
 
+        public string ProductCategory
+        {
+            get { return productCategory; }
+            set { productCategory = value; }
+        }
         public string ProductName
         {
             get { return productName; }
@@ -34,10 +40,11 @@ namespace InventoryBillingSystem.Product
             set { productQty = value; }
         }
 
-        public ProductModel(string name, int price, int qty) { 
+        public ProductModel(string name, int price, int qty,string CTG) { 
             ProductName = name;
             ProductPrice = price;
             ProductQty = qty;
+            ProductCategory = CTG;
         
         }
 

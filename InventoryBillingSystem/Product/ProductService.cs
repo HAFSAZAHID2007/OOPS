@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using System.Xml.Schema;
 
 namespace InventoryBillingSystem.Product
 {
@@ -99,5 +101,54 @@ namespace InventoryBillingSystem.Product
 
             return true;
         }
+       //NameSearch
+        public List<ProductModel> NameSearch(char n)
+        {
+            List < ProductModel> result = new List<ProductModel>();
+            foreach(ProductModel product in products)
+            {
+                for( int i = 0;int < product.ProductName.Length;i++)
+                    if (product.ProductName[i] == n)
+                {
+                         result.Add(product);
+                }
+            }
+            return result;
+
+        }
+        //Numeric Range
+        public List<ProductModel> NumericRange(int  max, int  min) 
+        { 
+            List <ProductModel> range = new List<ProductModel>();
+            foreach (ProductModel product in products)
+            {
+                if(product.ProductPrice > min &&  product.ProductPrice < max )
+                {
+                    range.Add(product);
+                }
+                return range;
+            }
+        }
+        public  List<ProductModel> CategoryMatch(string c ) {
+            List<ProductModel> CtgFilter = new List<ProductModel>();
+            
+            foreach (ProductModel product in products)
+            {
+                for(int i = 0; i < product.ProductCategory.Length; i++) { }
+               if(product.ProductCategory[i] == c)
+                {
+                    CtgFilter.Add(product);
+                    
+                }
+            }
+           
+            
+        }
+
+         
+
+
+
+
     }
 }
